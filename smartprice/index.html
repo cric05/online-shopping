@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PricePulse | Smart Shopping Comparison</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+
+    <nav>
+      <input type="checkbox" id="nav-toggle" />
+      <div class="logo">
+        <i class="fas fa-robot"></i><strong>PricePulse</strong>
+      </div>
+      <ul class="links">
+        <li id="home"><a class="active" href="#home">Home</a></li>
+        <li id="about"><a href="#about">About</a></li>
+        <li id="projects"><a href="#projects">Product</a></li>
+        <li id="contact"><a href="#contact">Contact</a></li>
+      </ul>
+      <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">
+          <i class="fas fa-robot"></i>
+          <span>Price<span>Pulse</span></span>
+        </div>
+        <p class="tagline">AI-powered shopping intelligence</p>
+      </header>
+
+      <!-- Search Section -->
+      <section id="home" class="search-section">
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for products..."
+          />
+          <button id="searchBtn">
+            <i class="fas fa-search"></i> Compare Prices
+          </button>
+        </div>
+
+        <div class="suggestions">
+          <span id="suggestionText"
+            >Try: "wireless headphones", "smartphone", or "laptop"</span
+          >
+        </div>
+      </section>
+
+      <!-- Filters -->
+      <section class="filters">
+        <div class="filter-group">
+          <label>Sort By:</label>
+          <select id="sortSelect">
+            <option value="price_asc">Price: Low to High</option>
+            <option value="price_desc">Price: High to Low</option>
+            <option value="rating">Best Rating</option>
+            <option value="discount">Highest Discount</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>Stores:</label>
+          <div class="store-options">
+            <button class="store-btn active" data-store="all">
+              <i class="fas fa-store"></i> All
+            </button>
+            <button class="store-btn" data-store="amazon">
+              <i class="fab fa-amazon"></i> Amazon
+            </button>
+            <!-- <button class="store-btn" data-store="flipkart">
+              <i class="fas fa-shopping-bag"></i> Flipkart
+            </button> -->
+            <button class="store-btn" data-store="ebay">
+              <i class="fab fa-ebay"></i> eBay
+            </button>
+            <button class="store-btn" data-store="walmart">
+              <i class="fas fa-store"></i>Walmart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section class="results-section">
+        <div class="loading" id="loading">
+          <div class="loader"></div>
+          <p>Scanning stores...</p>
+        </div>
+
+        <div class="results-container" id="resultsContainer">
+          <!-- Dynamic content will appear here -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2023 PricePulse | Data updates every 6 hours</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
